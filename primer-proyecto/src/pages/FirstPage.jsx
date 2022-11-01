@@ -1,20 +1,8 @@
 import { useState } from "react";
+import { useContador } from "../hooks/useContador";
 
 export const FirstPage = () => {
-    const [valor, setValor] = useState(10)//Sirve para disparar estados
-
-    
-
-    const modificarEstado = (num) => {
-        //el mayor entre 0 y numero futuro
-        setValor(Math.max(valor + num, 0))
-        
-    }
-
-    const reset = () => {
-
-        setValor(10)
-    }
+    const {valor, modificarEstado, reset} = useContador(200)
     return(
         <>
             <h1>Contador mejorado</h1>
