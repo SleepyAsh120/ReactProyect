@@ -1,6 +1,9 @@
-export const useContador = (initialState) =>{
-    const [valor, setValor] = useState(10)//Sirve para disparar estados
+import {useState} from "react"
 
+
+export const useContador = (initialState) =>{
+    const [valor, setValor] = useState(initialState)//Sirve para disparar estados
+console.log(valor, initialState)
     
 
     const modificarEstado = (num) => {
@@ -10,12 +13,12 @@ export const useContador = (initialState) =>{
     }
 
     const reset = () => {
-
         setValor(10)
     }
-    return(
+
+    return{
        valor,
        modificarEstado,
        reset
-    )
+    }
 }

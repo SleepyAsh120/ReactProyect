@@ -3,6 +3,7 @@ import { useContador } from "../hooks/useContador";
 
 export const FirstPage = () => {
     const {valor, modificarEstado, reset} = useContador(200)
+    console.log(valor)
     return(
         <>
             <h1>Contador mejorado</h1>
