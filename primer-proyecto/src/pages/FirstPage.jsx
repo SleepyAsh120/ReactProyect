@@ -6,11 +6,11 @@ export const FirstPage = () => {
     console.log(valor)
     return(
         <>
-            <h1>Contador mejorado</h1>
+            <h1>Contador 2.0</h1>
             <hr/>
             <h1>{valor}</h1>
-            <button onClick={() => modificarEstado(+1)}>SUMA 1</button>  
-            <button onClick={() => modificarEstado(-1)}>RESTA 1</button> 
+            <button onClick={() => modificarEstado(+1)}>SUMA</button>  
+            <button onClick={() => modificarEstado(-1)}>RESTA</button> 
             <button onClick={reset}>RESETEA CONTADOR</button> 
         </>
     )
